@@ -1,0 +1,16 @@
+<!-- Affichage des erreurs JS -->
+<div class="JSerrors"></div>
+
+<!-- Affichage des erreurs PHP -->
+<div class="PHPerrors">
+	<?php if (isset($_SESSION['errors']) == true) {
+        
+        echo('<p><span><i class="fas fa-exclamation-triangle"></i>Il y a ' . sizeof($_SESSION['errors']) . ' erreur(s) dans le formulaire !</span></p>');
+        
+        foreach($_SESSION['errors'] as $error) {
+            echo('<p>' . $error . '</p>');
+        }
+        
+        unset($_SESSION['errors']);
+    } ?>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head><?php include('../layouts/head.phtml'); ?></head>
+	
+	<body>
+		<header><?php include('../layouts/header.phtml'); ?></header>
+		
+		<main id="aroundMe">
+		    <div class="JSerrors"></div>
+            
+            <form id="chooseLocation">
+				<ul>
+					<li><button id="newSearch">Nouvelle recherche</button></li>
+				</ul>
+				<div id="askForAnAddress">
+					<ul>			
+		    			<li><label for="newZipcode">Entrez un code postal:</label></li>
+						<li><input type="text" name="newZipcode" id="newZipcode" maxlength="5"/></li>
+					</ul>
+					<ul class="hide" id="hiddenCity">			
+		    			<li><label for="newCity">Ville :</label></li>
+						<li><input type="text" name="newCity" id="newCity" disabled="disabled"/></li>
+					</ul>
+					<ul class="hide" id="hiddenAddress">
+		    			<li><label for="newAddress">Adresse :</label></li>
+		        		<li><input type="text" name="newAddress" id="newAddress"/></li>
+					</ul>
+					<ul class="alwaysHide">
+						<li><input type="text" name="selectedNumberStreet" id="selectedNumberStreet"/></li>
+						<li><input type="text" name="selectedZipcode" id="selectedZipcode"/></li>
+						<li><input type="text" name="selectedCity" id="selectedCity"/></li>
+						<li><input type="text" name="selectedLat" id="selectedLat"/></li>	
+						<li><input type="text" name="selectedLong" id="selectedLong"/></li>
+						<li><input type="text" name="selectedCityLat" id="selectedCityLat"/></li>	
+						<li><input type="text" name="selectedCityLong" id="selectedCityLong"/></li>
+					</ul>
+				</div>
+
+				<div id="askForACity">
+					<ul>
+						<li><label for="selectACity">Ou sélectionnez une ville: </label></li>
+						<li><select name="selectACity" id="selectACity">
+		        			<option value="chooseCity">Choisir une ville</option>
+		        			<?php foreach ($cities as $city) : ?>
+		        				<option value="<?= $city['id']; ?>"><?= $city['name'] . ' (' . $city['zipcode'] . ')' ; ?></option>
+		    				<?php endforeach ?>
+						</select></li>
+					</ul>
+				</div>
+			</form>
+		
+			<div id="map"></div>
+			<div id="cards"></div>
+		</main>
+		
+        <footer><?php include('../layouts/footer.phtml'); ?></footer>
+        <script type="module" src="../JS/around_me.js"></script>
+	</body>
+</html>

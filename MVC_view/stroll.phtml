@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head><?php include('../layouts/head.phtml'); ?></head>
+	
+	<body>
+		<header><?php include('../layouts/header.phtml'); ?></header>
+		
+		<main id="newStroll">
+			<ul>
+				<li><button id="newSearch">Nouvelle recherche</button></li>
+			</ul>
+			
+		    <div class="JSerrors"></div>
+		    
+            <div id="startingAndArrivalPoint">
+	            <form id="startNewStroll" class="form">
+					<div id="askForACity">
+						<ul>
+							<li><label for="selectACity">Sélectionnez une ville: </label></li>
+							<li><select name="selectACity" id="selectACity">
+			        			<option value="chooseCity">Choisir une ville</option>
+			        			<?php foreach ($cities as $city) : ?>
+			        				<option value="<?= $city['id']; ?>" data-zipcode="<?= $city['zipcode']; ?>"><?= $city['name'] . ' (' . $city['zipcode'] . ')' ; ?></option>
+			    				<?php endforeach ?>
+							</select></li>
+						</ul>
+						<button class="submit" type="button" id="selectCity">Valider la ville</button>
+					</div>
+
+		            <div id="startingPoint" class="hide">
+						<div>
+							<ul id="startAddress">
+				    			<li><label for="startPointNewAddress">Entrez une adresse de départ :</label></li>
+				        		<li><input type="text" name="startPointNewAddress" id="startPointNewAddress"/></li>
+							</ul>
+						</div>
+						<button class="submit" type="button" id="selectStartAddress">Valider l'adresse de départ</button>
+
+					</div>
+					
+					<div id="arrivalPoint" class="hide">
+						<div>
+							<ul id="arrivalAddress">
+				    			<li><label for="arrivalPointNewAddress">Entrez une adresse d'arrivée :</label></li>
+				        		<li><input type="text" name="arrivalPointNewAddress" id="arrivalPointNewAddress"/></li>
+							</ul>
+						</div>
+						<div class="button">
+						    <button class="submit" id="confirmStroll">C'est parti !</button>
+			                <button class="cancel" id ="cancelStroll">Annuler</button>
+				         </div>
+
+					</div>
+				</form>
+            </div>
+            
+			<div id="strollMap" class="hide"></div>
+			<div id="strollInfo" class="hide"></div>
+			<div id="cards" class="hide"></div>
+		</main>
+		
+        <footer><?php include('../layouts/footer.phtml'); ?></footer>
+        <script type="module" src="../JS/stroll.js"></script>
+	</body>
+</html>

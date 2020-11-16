@@ -1,0 +1,16 @@
+<a href="../MVC_controller/stroll.php">Vers ma destination</a>
+<a href="../MVC_controller/around_me.php">Autour de moi</a>
+
+<?php if (!empty($_SESSION) && $_SESSION['rights'] == 'admin') : ?>
+    <a href="../MVC_controller/my_profile.php">Mon profil</a>
+    <a href="../MVC_controller/insert_poi.php">Je participe</a>
+    <a href="../MVC_view/admin.phtml">Admin</a>
+    <a href="../MVC_controller/logout.php">Déconnexion</a> 
+<?php elseif (!empty($_SESSION) && $_SESSION['rights'] == 'visitor') : ?>
+    <a href="../MVC_controller/my_profile.php">Mon profil</a>
+    <a href="../MVC_controller/insert_poi.php">Je participe</a>
+    <a href="../MVC_controller/logout.php">Déconnexion</a> 
+<?php else : ?>   
+    <a href="../MVC_view/login.phtml">Me connecter</a>
+    <a href="../MVC_view/registration.phtml">M'inscrire</a>
+<?php endif; ?>

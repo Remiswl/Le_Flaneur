@@ -1,0 +1,1084 @@
+html {
+    height:100%;
+}
+
+body {
+    position:relative;
+    width:100%;
+    min-height:95%;
+    margin:0;
+    padding-bottom:40.7px;
+    font-family:'Blinker', sans-serif;
+}
+
+h1, h2 {
+    font-family:'Bebas Neue', cursive;
+}
+
+.fas {
+    margin:0px 10px;
+}
+
+:root {
+    --main-color-mustard:rgba(255,219,88,1);
+    --main-color-lightYellow:rgba(254,251,210,1);
+    --main-color-white:rgba(255,255,255,1);  
+    --main-color-black:rgba(0,0,0,1); 
+    --main-color-green:rgba(0,128,0,1); 
+    --main-color-red:rgba(255,0,0,1); 
+    --main-color-grey:rgba(128,128,128,1);
+    --main-color-darkGrey:rgba(153,153,153,1);
+    --main-color-salmon:rgba(246,168,137,1);
+    --main-color-blue:rgba(0,0,255,1);
+    --main-color-duckBlue:rgba(3,162,151,1);
+}
+
+/**************************** HEADER ***********************************/
+header, footer {
+    width:100%;
+    margin:0;
+    padding:10px 0px;
+    background-color:var(--main-color-mustard);
+}
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1 {
+    margin:0;
+    text-align:center;
+}
+
+header h1 a {
+    display:inline-block;
+    margin-left:10px;
+}
+
+header h1 a p {
+    margin:0;
+}
+    
+header nav, header nav div, footer nav {
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    text-align:left;
+}
+
+header h1 a, header nav div a, footer nav a {
+    color:var(--main-color-black);
+    text-decoration:none;
+}
+
+#responsivemenu-icon {
+	font-size:2em;
+}
+
+#responsivemenu { 
+	position:absolute;
+	z-index:1;
+	right:10px;
+	top:60px;
+	width:50%;
+	padding:10px;
+	border:1px solid var(--main-color-black);
+	background-color:var(--main-color-white);
+}
+
+#responsivemenu a {
+    display:block;    
+}
+
+#menu {
+    display:none;
+    margin:0;
+}
+
+/**************************** MAIN *************************************/
+main {
+    width:80%;
+    margin:auto;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align:center;
+}
+
+a {
+    color:var(--main-color-black);
+    text-decoration:none;
+}
+
+.textCenter {
+    width:80%;
+    margin:auto;
+    text-align:center;
+}
+
+/**************** Boutons *****************/
+.submit, .cancel {
+    margin:10px;
+    padding:10px;
+    border-radius:90px;
+    color:var(--main-color-white);
+}
+
+.submit {
+    background-color:var(--main-color-green);
+}
+
+.cancel {
+    background-color:var(--main-color-red);
+}
+
+#cancelStroll {
+    color:var(--main-color-white);
+    text-decoration:none;
+}
+
+/************** Formulaires ***************/
+.form {
+    width:90%;
+    max-width:90%;
+    margin:30px auto;
+    padding:10px 0px;
+    border:1px solid var(--main-color-black);
+    border-radius:10px;
+    text-align:center;
+}
+
+.form > input, .form > textarea {
+    display:block;
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+    margin-bottom:30px;
+    padding-bottom:10px;
+    border:none;
+    border-bottom:1px var(--main-color-grey) solid;
+    background-color:transparent;
+}
+
+.form > textarea {
+    max-width:90%;
+    resize:vertical;
+}
+
+.form > p {
+    width:90%;
+    margin:auto;
+    padding-bottom:5px;
+    text-align:left;
+}
+
+/******** Affichage des erreurs ***********/
+.JSerrors:empty {
+    border:0;
+    background-color:transparent;
+}
+
+.JSerrors {
+    width:50%;
+    margin:auto;
+    padding:10px;
+    border:1px solid var(--main-color-red); 
+    background-color:var(--main-color-salmon);
+    color:var(--main-color-red);
+    text-align:center;
+}
+
+.JSerrors p {
+    text-align:left;
+}
+
+.JSerrors span, .PHPerrors p {
+    color:var(--main-color-red);
+}
+
+.PHPerrors {
+    display:inline-block;
+    width:90%;
+    margin:auto;
+    text-align:center;
+}
+
+/**************** Index ******************/
+.choices {
+    width:80%;
+    margin:10px auto;
+    padding:20px;
+    border-radius:5%;
+    background-color:var(--main-color-lightYellow);
+    text-align:center;
+}
+
+.choices i {
+    margin-bottom:20px;
+    font-size:4em;
+}
+
+.choices p {
+    margin:0;
+}
+
+/******** Index - Animation texte ********/
+.rw-wrapper {
+    position:relative;
+    padding-bottom:40px;
+}
+
+.rw-wrapper h2 {
+    margin-bottom:5px;
+}
+
+.rw-words {
+    display:block;
+    position:relative;
+    margin:20px auto;
+}
+
+.rw-words-1 span {
+    position:absolute;
+    width:100%;
+    margin-left:-50%;
+    opacity:0;
+    overflow:hidden;
+    color:var(--main-color-mustard);
+    -moz-animation: rotateWord 7.5s linear infinite 0s;
+    -webkit-animation: rotateWord 7.5s linear infinite 0s;
+    -o-animation: rotateWord 7.5s linear infinite 0s;
+    animation: rotateWord 7.5s linear infinite 0s;
+}
+
+.rw-words-1 span:nth-child(2) {
+    -moz-animation-delay:2.5s;
+    -webkit-animation-delay:2.5s;
+    -o-animation-delay:2.5s;
+    animation-delay:2.5s;
+    color:var(--main-color-mustard);
+}
+
+.rw-words-1 span:nth-child(3) {
+    -moz-animation-delay:5s;
+    -webkit-animation-delay:5s;
+    -o-animation-delay:5s;
+    animation-delay:5s;
+    color:var(--main-color-mustard);
+}
+
+@-moz-keyframes rotateWord {
+    0% {opacity:0;}
+    2% {opacity:0;-moz-transform:translateY(-30px);transform:translateY(-30px);}
+    5% {opacity:1;-moz-transform:translateY(0px);transform:translateY(0px);}
+    17% {opacity:1;-moz-transform:translateY(0px);transform:translateY(0px);}
+    20% {opacity:0;-moz-transform:translateY(30px);transform:translateY(30px);}
+    80% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@-webkit-keyframes rotateWord {
+    0% {opacity:0;}
+    2% {opacity:0;-webkit-transform:translateY(-30px);transform:translateY(-30px);}
+    5% {opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
+    17% {opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
+    20% {opacity:0;-webkit-transform:translateY(30px);transform:translateY(30px);}
+    80% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@-o-keyframes rotateWord {
+    0% {opacity:0;}
+    2% {opacity:0;-o-transform:translateY(-30px);transform:translateY(-30px);}
+    5% {opacity:1;-o-transform:translateY(0px);transform:translateY(0px);}
+    17% {opacity:1;-o-transform:translateY(0px);transform:translateY(0px);}
+    20% {opacity:0;-o-transform:translateY(30px);transform:translateY(30px);}
+    80% {opacity:0;}
+    100% {opacity:0;}
+}
+
+@keyframes rotateWord {
+    0% {opacity:0;}
+    2% {opacity:0;-webkit-transform:translateY(-30px);transform:translateY(-30px);}
+    5% {opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
+    17% {opacity:1;-webkit-transform:translateY(0px);transform:translateY(0px);}
+    20% {opacity:0;-webkit-transform:translateY(30px);transform:translateY(30px);}
+    80% {opacity:0;}
+    100% {opacity:0;}
+}
+
+/************* Je participe **************/
+.addPoi {
+    width:90%;
+    margin:auto;
+    text-align:center;
+} 
+
+.addPoi fieldset {
+    margin-top:10px;
+    padding:10px;
+    border:0.5px solid var(--main-color-black);
+    border-radius:10px;
+}
+
+.addPoi fieldset ul {
+    display:inline-block;
+    width:80%;
+    padding-left:0;
+    text-align:left;
+    list-style-type:none;
+}
+
+.addPoi fieldset ul textarea {
+    width:100%;
+    max-width:100%;
+    min-width:100%;
+    height:120px;
+    padding-left:8px;
+    padding-right:8px;
+}
+
+.addPoi fieldset label {
+    display:inline-block;
+    width:90%;
+    margin-right:20px;
+}
+
+.addPoi fieldset li {
+    vertical-align:top;
+}
+
+.addPoi fieldset ul li input {
+    width:100%;
+    padding:0;
+}
+
+.addPoi input, .addPoi textarea, #chooseLocation input {
+    display:inline-block;
+}
+
+.addPoi fieldset #upload li {
+    width:100%;
+}
+
+.addPoi fieldset .hide, .addPoi fieldset .alwaysHide {
+    display:none;
+}
+
+.addPoi .alwaysHide li input {
+    display:block;
+}
+
+.addPoi #copyrights {
+    margin-top:0;
+}
+
+.addPoi #copyrights li, .addPoi #copyrights label  {
+    width:auto;
+    padding-right:3px;
+}
+
+/********** Vers ma destination **********/
+#newStroll > ul {
+    padding:0;
+}
+
+#newStroll > ul > li, #chooseLocation > ul > li {
+    list-style-type:none;
+}
+
+#startNewStroll .hide, #startNewStroll .alwaysHide {
+    display:none;
+}
+
+#startingAndArrivalPoint > form {
+    display:inline-block;
+    margin:auto;
+    padding:5px 10px;
+    border:1px solid var(--main-color-black);
+    text-align:center;
+}
+
+#startingAndArrivalPoint ul {
+    padding:0;
+}
+
+#startingAndArrivalPoint li {
+    margin:auto;
+    text-align:center;
+    list-style-type:none;
+}
+
+#strollMap {
+    width:100%;
+    height:400px;
+    z-index:0;
+}
+
+#strollInfo {
+    margin-left:0;
+    text-align:left;
+    font-weight:bold;
+}
+
+.hide {
+    display:none;
+}
+
+/************** Around me ****************/
+#chooseLocation {
+    margin:auto;
+    text-align:center;
+} 
+
+#chooseLocation .hide, #chooseLocation .alwaysHide {
+    display:none;
+}
+
+#chooseLocation ul {
+    padding-left:0;
+}
+
+#chooseLocation li {
+    margin:auto;
+    text-align:center;
+    list-style-type:none;
+}
+
+#map {
+    width:100%;
+    height:500px;
+}
+
+div.leaflet-popup-content {
+    margin:auto;
+    margin-right:2px;
+    margin-left:2px;
+    text-align:center;
+}
+
+div.leaflet-popup-content p {
+    margin-top:5px;
+    margin-bottom:2px;
+}
+
+.markerIcon {
+    width:80px;
+    object-fit:contain;
+}
+
+/**** Around me - Affichage des cards ****/
+#cards, #strollCards {
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.cardContainer {
+	perspective:800px;
+	position:relative;
+	width:100%;
+	min-height:550px;
+	margin:0;
+	text-align:center;
+}
+
+.cardContainer.hover .card {
+    transform:rotateY(180deg);    
+}
+
+#aroundMe .card, #newStroll .card {
+    position:relative;
+    width:100%;
+	min-height:550px;
+	transition:0.8s;
+	transform-style:preserve-3d;
+}
+    
+#aroundMe .front, #aroundMe .back, #newStroll .front, #newStroll .back {
+    position:absolute;
+    top:0;
+    left:0;
+    width:90%;
+    height:500px;
+    margin:auto;
+    margin-top:10px;
+    padding:10px;
+    border:1px var(--main-color-black) solid;
+    border-radius:10px;
+    box-shadow:0px 5px 20px var(--main-color-darkGrey);
+    background-color:var(--main-color-white);
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden;
+    -moz-backface-visibility:hidden;
+}
+    
+#aroundMe .back, #newStroll .back  {
+	width:90%;
+	transform:rotateY(180deg);
+}
+
+.front {
+    position:relative;
+}
+
+.imgContainer {
+    height:50%;
+}
+
+.front img {
+    width:95%;
+    height:95%;
+    margin:5px;
+    object-fit:contain;
+}
+
+.distance {
+    display:inline;
+    position:absolute;
+    top:10px;
+    left:0px;
+    margin-top:5px;
+    padding:0px 10px 5px 15px;
+    text-align:left;
+    background-color:var(--main-color-white);
+}
+
+.textLeft {
+    width:95%;
+    margin:auto;
+    text-align:left;
+}
+
+.category {
+   color:var(--main-color-duckBlue);
+   font-weight:bold;
+}
+
+.like, .report {
+    position:absolute;
+    bottom:16px;
+    left:10px;
+    margin:auto;
+    text-align:left;
+}
+
+.like button, .report button {
+    padding-right:0;
+    border:0;
+    background-color:transparent;
+}
+
+.report button {
+    color:var(--main-color-red);
+}
+
+.report .fas {
+    font-size:1.5em;
+}
+
+.turnCard {
+    position:absolute;
+    bottom:10px;
+    right:0px;
+    padding-right:0;
+    border:0;
+    background-color:transparent;
+    color:var(--main-color-duckBlue);
+    font-size:2em;
+}
+
+.back .article {
+    width:90%;
+    height:90%;
+    margin:auto;
+    text-align:left;
+    overflow-y:auto;
+}
+
+.textLeft h2 {
+    margin-top:5px;
+}
+
+/***************** Admin *****************/
+#sideMenu {
+    border-bottom:1px solid var(--main-color-black);
+    text-align:center;
+}
+
+#sideMenu ul {
+    padding-left:0;
+}
+
+#sideMenu li {
+    margin-bottom:5px;
+    padding-left:5px;
+    text-align:left;
+    list-style-type:none;
+}
+
+#displayInfo {
+    margin-top:15px;
+}
+
+#displayInfo .submit {
+    margin:auto;
+    text-align:right;
+}
+
+#statisticsContainer {
+    margin:auto;
+    text-align:left;
+}
+
+/****** Admin - Gestion des messages ******/
+#sortMessages, #sortPOIByStatus {
+    margin-bottom:15px;
+}
+
+#sortMessages > *, #sortPOIByStatus > * {
+    display:inline-block;    
+}
+
+.listOfMessages {
+    width:100%;
+    margin:auto;
+    margin-bottom:10px;
+    border:1px solid var(--main-color-black);
+    border-collapse:collapse;
+    text-align:left;
+}
+
+.listOfMessages td {
+    width:30%;
+    border:1px solid var(--main-color-black);
+    padding-left:5px;
+}
+
+.listOfMessages a {
+    color:var(--main-color-blue);
+    text-decoration:underline;
+}
+
+/********* Admin - Gestion des POI ********/
+.interactionButton {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    margin-bottom:20px;
+    border:1px solid var(--main-color-black);
+    border-top:0;
+}
+
+.interactionButton .fas {
+    font-size:2em;    
+}
+
+.interactionButton .fa-edit {
+    color:var(--main-color-black);
+}
+
+.interactionButton .fa-check {
+    color:var(--main-color-green);
+}
+
+.interactionButton .fa-trash-alt {
+    color:var(--main-color-red);
+}
+
+#adminMenu #cards {
+    display:flex;
+    flex-wrap:wrap;
+}
+    
+.cardContainer {
+	perspective:800px;
+}
+
+.cardContainer.hover .card {
+    transform:rotateY(180deg);    
+}
+
+#displayInfo .imgContainer {
+    height:50%;
+}
+
+#displayInfo .imgContainer img {
+    width:95%;
+    height:95%;
+    margin:5px;
+    object-fit:contain;
+}
+
+#adminMenu .card {
+    position:relative;
+}
+    
+#adminMenu .front, #adminMenu .back {
+    height:500px;
+    margin:auto;
+    margin-top:10px;
+    padding:10px;
+    border:1px var(--main-color-black) solid;
+    border-radius:10px;
+    box-shadow:0px 5px 20px #999;
+    background-color:var(--main-color-white);
+}
+
+/******* Admin - Gestion des droits *******/
+.listOfUsers {
+    margin:auto;
+    margin-bottom:20px;
+    border-collapse:collapse;
+    border:1px solid var(--main-color-black);
+    text-align:center;
+}
+
+.listOfUsers thead {
+    background-color:var(--main-color-mustard);
+}
+
+.listOfUsers td {
+    width:30%;
+    border:1px solid var(--main-color-black);
+}
+
+.listOfUsers tbody td {
+    padding-left:5px;
+    text-align:left;
+}
+
+#displayInfo .button {
+    margin:auto;
+    text-align:center;
+}
+
+#confirmRights {
+    background-color:var(--main-color-green);
+    color:var(--main-color-white);
+}
+
+.radioContainer > div {
+    display:block;
+}
+
+/****** Admin - Gestion des catégories *****/
+.listOfCategories {
+    margin:auto;
+    margin-bottom:20px;
+    border:1px solid var(--main-color-black);
+    border-collapse:collapse; 
+    text-align:center;
+}
+
+.listOfCategories thead {
+    background-color:var(--main-color-mustard);
+}
+
+.listOfCategories td {
+    width:30%;
+    border:1px solid var(--main-color-black);
+}
+
+.listOfCategories tbody td {
+    padding-left:5px;
+    text-align:center;
+}
+
+#displayInfo .modifyCategory {
+    margin-left:0;
+    text-align:left;
+}
+    
+/*************** Mon profil ***************/
+#deleteAccount {
+    margin-top:20px;
+}
+
+#myStrolls {
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    border:1px solid var(--main-color-black);
+    border-radius:10px;
+    border-collapse:collapse;
+    text-align:center;
+}
+
+#myStrolls thead {
+    background-color:var(--main-color-mustard);
+}
+
+#myStrolls td {
+    border:1px solid var(--main-color-black);
+}
+
+#myStrolls tbody td {
+    padding-left:5px;
+    text-align:left;
+}
+
+/************ Modification POI ************/
+#photo img {
+    width:200px;
+}
+
+/************ Mentions légales ************/
+#legal h2, #legal p {
+    text-align:left;
+}
+
+/**************************** FOOTER ***********************************/
+footer {
+    position:absolute;
+    bottom:0;
+}
+
+footer nav {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+
+/************************ RESPONSIVE DESIGN *****************************/
+/************ Tablette ************/
+@media screen and (min-device-width:480px) {
+    /* HEADER */
+    header {
+        margin:auto;
+        text-align:center;
+    }
+    
+    header h1 a {
+        display:block;
+    }
+    
+    /* MAIN */
+    main {
+        width:85%;
+    }
+    
+    main > div {
+        width:80%;
+        margin:auto;
+        text-align:center;
+    }
+    
+    .rw-words {
+        display:inline-block;
+    }
+    
+    .rw-wrapper span {
+        width:120px;
+        top:-1.5px;
+        left:0;
+        text-align:left;
+    }
+
+    .choicebox {
+        margin:0;
+    }
+    
+    .choices {
+        display:inline-block;
+        width:30%;
+        margin:10px;
+    }
+    
+    /* Admin */
+    #adminMenu {
+        width:90%;
+        display:flex;
+        flex-direction:row;
+    }
+    
+    #adminMenu .card {
+        width:60%;
+    }
+    
+    #sideMenu {
+        width:25%;
+        margin:0;
+        border-right:2px var(--main-color-black) solid;
+        border-bottom:0;
+        text-align:left;
+    }
+    
+    #sideMenu ul {
+        padding-left:20px;
+    }
+    
+    #displayInfo {
+        width:80%;
+        margin:10px;
+        text-align:center;
+    }
+
+    #displayInfo > .button, #addACategory {
+        margin:auto;
+        text-align:center;
+    }
+
+    /* Formulaires */
+    .form {
+        width:50%;
+    }
+    
+    /* Cards */
+    #cards, #strollCards {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        width:100%;
+        margin:0;
+        text-align:center;
+    }
+
+    .cardContainer {
+        width:45%;
+        margin:0;
+        text-align:center;
+    }
+    
+    .card {
+        margin:auto;
+        text-align:center;
+    }
+    
+    .front, .back {
+        width:90%;
+        margin:10px 10px 0px;
+        margin-left:0;
+    }
+    
+    /* Contacts */
+    #contactForm {
+       margin:auto;
+       text-align:center;
+    }
+    
+    #contactForm .form {
+       width:90%;
+    }
+}
+
+/************ Ordinateur **********/
+@media screen and (min-device-width:960px) {
+    body {
+        width:80%;
+        margin:auto;
+        text-align:center;
+    }
+    
+    header h1 {
+        width:20%;
+        margin-left:10px;
+    }
+    
+    header h1 a {
+        width:100%;
+        text-align:left;
+    }
+    
+    header h1 a p {
+        display:inline-block;
+    }
+    
+    #responsivemenu-icon {
+    	display:none;
+    }
+    
+    #menu {
+        display:inline-block;
+    }
+    
+    #menu a {
+        margin:0px 10px;
+    }
+    
+    /* MAIN */
+    main {
+        margin-bottom:20px;
+    }
+    
+    main > div {
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+    /* Formulaire */
+    .form {
+        width:30%;
+        max-width:50%;
+    }
+    
+    .addPoi fieldset ul {
+        width:90%;
+    }
+    
+    .addPoi fieldset ul li {
+        display:inline-block;
+    }
+    
+    .addPoi fieldset ul li:nth-child(odd) {
+        width:20%;
+    }
+    
+    .addPoi fieldset ul li:nth-child(even) {
+        width:75%;
+    }
+    
+    .addPoi fieldset .alwaysHide li {
+        display:block;
+    }
+    
+    .addPoi fieldset .alwaysHide li input {
+        width:90%;
+    }
+    
+    /* mon profil */
+    #myStrolls {
+        width:90%;    
+    }
+    
+    /* Admin */
+    .radioContainer > div {
+        display:inline-block;
+    }
+
+    #adminMenu .card {
+        display:flex;
+        flex-direction:row;
+        width:80%;
+    }
+    
+    #adminMenu .front, #adminMenu .back {
+        width:60%;
+        margin-left:0;
+        margin-right:0;
+    }
+    
+    #adminMenu .front {
+        margin-right:30px;
+    }
+    
+    .interactionButton {
+        flex-direction:column;
+        justify-content:center;
+        width:40%;
+        border:0;
+    }
+    
+    /* Cards */
+    .cardContainer {
+        width:30%;
+    }
+    
+    /* FOOTER */
+    footer {
+        width:100%;
+    }
+}

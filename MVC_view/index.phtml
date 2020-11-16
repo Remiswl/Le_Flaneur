@@ -1,0 +1,40 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head><?php include('../layouts/head.phtml'); ?></head>
+	
+	<body>
+		<header><?php include('../layouts/header.phtml'); ?></header>
+		
+		<main>
+		    <section class="rw-wrapper">
+		        <h2>Le Flâneur, générateur de ballades
+    	            <div class="rw-words rw-words-1">
+    	                <span>surprenantes</span>
+    	                <span>insolites</span>
+    	                <span>étonnantes</span>
+	                </div>
+                </h2>
+            </section>
+            
+    	    <p>Vous avez envie de prendre le chemin des écoliers pour vous rendre à votre destination ou vous souhaitez savoir quoi voir autour de votre position ? Sélectionnez une des deux options ci-dessous :</p>
+            <div>	
+                <a href="../MVC_controller/stroll.php" class="choicebox">
+                    <div class="choices">
+                        <i class="fas fa-route"></i>
+                        <p>Vers ma destination</p>
+                    </div>
+                </a>
+                <a href="../MVC_controller/around_me.php" class="choicebox">
+                    <div class="choices">
+                        <i class="fas fa-street-view"></i>
+                        <p>Autour de moi</p>
+                    </div>
+                </a>
+            </div>
+		</main>
+		
+        <footer><?php include('../layouts/footer.phtml'); ?></footer>
+	</body>
+</html>

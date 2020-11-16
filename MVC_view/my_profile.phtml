@@ -1,0 +1,86 @@
+<?php if (empty($_SESSION)){header('Location: index.phtml');} ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head><?php include('../layouts/head.phtml'); ?></head>
+	
+	<body>
+		<header><?php include('../layouts/header.phtml'); ?></header>
+		
+		<main id="myProfile">
+			
+			<?php include('../layouts/errors_div.phtml'); ?>
+			
+            <form method="POST" action="../MVC_controller/update_profile.php" class="addPoi" enctype=multipart/form-data>
+				<fieldset>
+					<legend>Mes informations</legend>
+					<ul>
+						<li><label for="first_name">Prénom :</label></li>
+						<li><input type="text" name="first_name" id="first_name" value="<?= $users[0]['first_name']; ?>"/></li>
+					</ul>
+					<ul>
+						<li><label for="last_name">Nom :</label></li>
+						<li><input type="text" name="last_name" id="last_name" value="<?= $users[0]['last_name']; ?>"/></li>
+					</ul>
+					<ul>
+						<li><label for="email">Email :</label></li>
+						<li><input type="email" name="email" id="email" value="<?= $users[0]['email']; ?>"/></li>
+					</ul>
+					<ul>
+						<li><label for="login">Login :</label></li>
+						<li><input type="text" name="login" id="login" value="<?= $users[0]['login']; ?>"/></li>
+					</ul>
+					<ul>
+						<li><label for="password">Nouveau mot de passe :</label></li>
+						<li><input type="password" name="newPassword" id="password"/></li>
+					</ul>
+					<ul>
+						<li><label for="passwordConfirmation">Confirmez le nouveau mot de passe :</label></li>
+						<li><input type="password" name="newPasswordConfirmation" id="passwordConfirmation"/></li>
+					</ul>
+					<ul>
+						<li><label>Nombre de points d'intérêt proposés :</label></li>
+						<li><?= $users[0]['number_of_posts'];?></li>
+					</ul>
+					<ul>
+						<li><label>Nombre de trajets effectués :</label></li>
+						<li><?= $users[0]['number_of_strolls'];?></li>
+					</ul>
+					<div class="button">
+					    <input class="submit" type="submit" value="Valider les changements" id="submitProfileModif"/>
+		                <button class="cancel" type="button">Annuler</button>
+		            </div>
+	 			</fieldset>   		
+			</form>
+			
+			<form class="addPoi">
+				<fieldset >
+					<legend>Mes derniers trajets</legend>
+					<table id="myStrolls">
+						<thead>
+							<tr>
+								<td>Date</td>
+								<td>Adresse de départ</td>
+								<td>Adresse d'arrivée</td>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach($userStrolls as $userStroll) : ?>
+							<tr>
+								<td><?= $userStroll['date']; ?></td>
+								<td><?= $userStroll['start_address']; ?></td>
+								<td><?= $userStroll['arrival_address']; ?></td>
+							</tr>
+							<?php endforeach ?>
+						</tbody>
+					</table>
+				</fieldset>
+			</form >
+			
+			<button id="deleteAccount" type="button" data-index="<?= $_SESSION['id'] ?>">Supprimer mon compte</button>
+		</main>
+		
+    	<footer><?php include('../layouts/footer.phtml'); ?></footer>
+    	<script type="module" src="../JS/my_profile.js"></script>
+	</body>
+</html>

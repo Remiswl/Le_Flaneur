@@ -1,0 +1,81 @@
+<?php 
+	if (empty($_SESSION)){header('Location: index.phtml');} 
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head><?php include('../layouts/head.phtml'); ?></head>
+	
+	<body>
+		<header><?php include('../layouts/header.phtml'); ?></header>
+		
+		<main id="createCard">
+			
+			<?php include('../layouts/errors_div.phtml'); ?>
+		
+			<form method="POST" action="../MVC_controller/insert_new_poi.php" class="addPoi" enctype=multipart/form-data>
+			<fieldset>
+				<legend>Nouveau point d'intérêt</legend>
+				<ul>
+					<li><label for="newTitle">Titre :</label></li>
+					<li><input type="text" name="newTitle" id="newTitle"/></li>
+				</ul>
+				<ul>
+					<li><label for="newDescription">Description :</label></li>
+					<li><textarea name="newDescription" id="newDescription"></textarea></li>
+				</ul>
+				<ul>
+					<li><label for="newWebsite">Site internet (optionnel):</label></li>
+					<li><input type="url" name="newWebsite" id="newWebsite" placeholder="http://www.monsite.fr"/></li>
+				</ul>
+				<ul>			
+	    			<li><label for="newZipcode">Code postal :</label></li>
+					<li><input type="text" name="newZipcode" id="newZipcode" maxlength="5"/></li>
+				</ul>
+				<ul class="hide" id="hiddenCity">			
+	    			<li><label for="newCity">Ville :</label></li>
+					<li><input type="text" name="newCity" id="newCity" disabled="disabled"/></li>
+				</ul>
+				<ul class="hide" id="hiddenAddress">
+	    			<li><label for="newAddress">Adresse :</label></li>
+	        		<li><input type="text" name="newAddress" id="newAddress"/></li>
+				</ul>
+				<ul class="alwaysHide">
+					<li><input type="text" name="selectedNumberStreet" id="selectedNumberStreet"/></li>
+					<li><input type="text" name="selectedZipcode" id="selectedZipcode"/></li>
+					<li><input type="text" name="selectedCity" id="selectedCity"/></li>
+					<li><input type="text" name="selectedLat" id="selectedLat"/></li>	
+					<li><input type="text" name="selectedLong" id="selectedLong"/></li>
+					<li><input type="text" name="selectedCityLat" id="selectedCityLat"/></li>	
+					<li><input type="text" name="selectedCityLong" id="selectedCityLong"/></li>
+				</ul>
+				<ul>     
+	        		<li><label for="category">Catégorie :</label></li>
+        			<li><select name="category" id="category">
+		        		<option value="chooseCategory">Choisir une catégorie</option>
+		        		<?php foreach ($categories as $category) : ?>
+        					 <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
+        				<?php endforeach ?>
+        			</select></li>
+				</ul>
+                <ul id="upload">
+                	<li><label>Ajouter une photo (taille maximum : 1MB; formats acceptés : .jpg, .jpeg, .git, .png) :</label></li>
+           	        <li><input type="hidden" name="MAX_FILE_SIZE" value="1048576"/></li>
+                	<li><input type="file" name="img"/></li>
+                </ul>
+                <ul id="copyrights">
+                	<li><input type="checkbox" name="copyright" id="copyright"/></li>
+                	<li><label for="copyright">Je certifie être l'auteur de cette photo et autorise son utilisation sur le site leflaneur.fr.</label></li>
+                </ul>
+                <div class="button">
+				    <input class="submit" type="submit" id="confirmCardCreation" value="Enregistrer"/>
+	                <button class="cancel" type="button">Annuler</button>
+	            </div>
+ 			</fieldset>   		
+			</form>
+		</main>
+
+        <footer><?php include('../layouts/footer.phtml'); ?></footer>
+        <script type="module" src="../JS/poi.js"></script>
+	</body>
+</html>
