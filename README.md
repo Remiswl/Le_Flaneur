@@ -8,18 +8,18 @@ Welcome to Le Flâneur's website that will allow you to discover a city through 
 These two main functions are freely accessible.
 
 However, once registered, the user will be able to:
-    - manage his data (add, modify, delete)
-    - submit points of interest
-    - consult his trip history
-    - delete his account
+* manage his data (add, modify, delete)
+* submit points of interest
+* consult his trip history
+* delete his account
 
 Finally, only administrators have access to the admin page, and will be able to:
-    - consult the website's statistics
-    - view the messages send from the 'Contact us' page
-    - edit and delete points of interest
-    - manage categories (modification / deletion)
-    - manage user rights (visitor / admin)
-    - delete a user
+* consult the website's statistics
+* view the messages send from the 'Contact us' page
+* edit and delete points of interest
+* manage categories (modification / deletion)
+* manage user rights (visitor / admin)
+* delete a user
 
 The site was made to end my training in 3W Academy and get my Certification as Web developper.
 
