@@ -24,9 +24,8 @@ Finally, only administrators have access to the admin page, and will be able to:
 The site was made to end my training in 3W Academy and get my Certification as Web developper.
 
 ## Technologies
-* __JavaScript ES6__
-* __PHP7__
-* __SQL__
+* Front-end: __HTML5__, __CSS3__, __JavaScript ES6__
+* Back-end: __PHP7__, __SQL__
 * API: __Leaflet__
 * Mapping: __Mapbox__, __OpenStreetMap__
 
@@ -43,6 +42,6 @@ To run the site, you will have to enter:
 * it uses an __MVC model__ 
 
 ### Possible improvments
-* its comments are all in French
+* its comments are currently all in French
 * for the moment, only French cities are available
 * addresses search tool could be improved
