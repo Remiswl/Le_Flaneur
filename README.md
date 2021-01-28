@@ -21,7 +21,7 @@ Finally, only administrators have access to the admin page, and will be able to:
 * manage user rights (visitor / admin)
 * delete a user
 
-The site was made to end my training in 3W Academy and get my Certification as Web developper.
+The site was made to end my training in 3W Academy and get my Certification as Web developer.
 
 ## Technologies
 * Front-end: __HTML5__, __CSS3__, __JavaScript ES6__
